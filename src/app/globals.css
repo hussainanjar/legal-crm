@@ -1,26 +1,52 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 26, 26, 26;
+  --background-rgb: 249, 250, 251;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-border p-6;
+  }
+  
+  .card-hover {
+    @apply transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-accent-indigo text-white hover:bg-accent-indigo-600 focus:ring-accent-indigo-300;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-text-primary border border-border hover:bg-gray-50 focus:ring-gray-200;
+  }
+
+  .input {
+    @apply rounded-lg border-border focus:border-accent-indigo focus:ring-accent-indigo-100;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-text-secondary rounded-lg hover:bg-accent-indigo-50 hover:text-accent-indigo transition-colors duration-200;
+  }
+
+  .sidebar-link-active {
+    @apply bg-accent-indigo-50 text-accent-indigo font-medium;
+  }
 }
