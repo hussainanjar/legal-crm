@@ -29,7 +29,7 @@ export default function Sidebar({ isMobileOpen, closeMobileSidebar }: SidebarPro
     { name: 'Clients', href: '/clients', icon: Users },
     { name: 'Documents', href: '/documents', icon: FileText },
     { name: 'Calendar', href: '/calendar', icon: Calendar },
-    { name: 'Time & Billing', href: '/billing', icon: Clock },
+    { name: 'Time & Billing', href: '/time-tracking', icon: Clock },
     { name: 'Client Portal', href: '/portal', icon: ExternalLink },
     { name: 'Settings', href: '/settings', icon: Settings },
   ];
