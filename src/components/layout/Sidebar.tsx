@@ -73,7 +73,7 @@ export default function Sidebar({ isMobileOpen, closeMobileSidebar }: SidebarPro
         )}
       >
         <div className="flex items-center justify-between h-16 px-6 border-b border-border">
-          <h2 className="text-lg font-semibold">Prompt CRM</h2>
+          <h2 className="text-lg font-semibold">Legal CRM</h2>
           <button onClick={closeMobileSidebar} className="p-1 rounded-lg text-text-secondary hover:text-text-primary hover:bg-gray-100">
             <X className="h-5 w-5" />
           </button>

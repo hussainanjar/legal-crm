@@ -38,7 +38,7 @@ export default function PortalPage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-xl font-bold text-accent-indigo">Prompt CRM</h1>
+                <h1 className="text-xl font-bold text-accent-indigo">Legal CRM</h1>
               </div>
               <div className="hidden md:block ml-10">
                 <div className="ml-4 flex items-center space-x-4">
@@ -748,7 +748,7 @@ export default function PortalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-text-secondary text-sm">
-              &copy; 2023 Prompt CRM. All rights reserved.
+              &copy; 2023 Legal CRM. All rights reserved.
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-text-secondary hover:text-text-primary text-sm">

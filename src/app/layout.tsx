@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Prompt CRM - Legal Practice Management",
+  title: "Legal CRM - Legal Practice Management",
   description: "Premium CRM for lawyers and small legal firms",
 };
 

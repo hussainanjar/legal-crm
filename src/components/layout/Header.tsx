@@ -29,9 +29,11 @@ export default function Header({ openMobileSidebar }: HeaderProps) {
         </button>
         
         {/* Logo */}
-        <Link href="/" className="ml-2 lg:ml-0 font-bold text-xl">
-          Prompt CRM
-        </Link>
+        <div className="hidden lg:flex items-center flex-shrink-0 px-4">
+          <Link href="/" className="text-xl font-semibold">
+            Legal CRM
+          </Link>
+        </div>
       </div>
 
       {/* Search */}
