@@ -116,12 +116,6 @@ const folders = [
 
 export default function DocumentsPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [activeTab, setActiveTab] = useState('all');
-  
-  // Function to handle tab changes
-  const handleTabChange = (tabId: string) => {
-    setActiveTab(tabId);
-  };
   
   return (
     <Layout>
@@ -355,7 +349,7 @@ export default function DocumentsPage() {
                 ]}
                 variant="underline"
                 className="px-6 pt-6"
-                defaultTabId={activeTab}
+                defaultTabId="all"
               />
             </Card>
           </div>

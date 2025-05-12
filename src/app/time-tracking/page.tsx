@@ -16,11 +16,11 @@ import {
   Edit, 
   Download,
   DollarSign,
-  Filter,
-  Users,
-  ChevronDown,
-  Briefcase
+  Filter
 } from 'lucide-react';
+
+// Define BadgeVariant type
+type BadgeVariant = 'default' | 'primary' | 'success' | 'warning' | 'error' | 'info';
 
 // Mock time entries
 const timeEntries = [
@@ -449,9 +449,13 @@ export default function TimeTrackingPage() {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                           <div className="flex items-center space-x-2">
-                            <Button variant="ghost" size="sm" iconLeft={<Edit className="h-4 w-4" />} />
+                            <Button variant="ghost" size="sm" iconLeft={<Edit className="h-4 w-4" />}>
+                              Edit
+                            </Button>
                             {entry.status === 'billed' && (
-                              <Button variant="ghost" size="sm" iconLeft={<Download className="h-4 w-4" />} />
+                              <Button variant="ghost" size="sm" iconLeft={<Download className="h-4 w-4" />}>
+                                Download
+                              </Button>
                             )}
                           </div>
                         </td>

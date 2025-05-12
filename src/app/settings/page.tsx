@@ -3,25 +3,23 @@
 import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import Page from '@/components/layout/Page';
-import { Card, CardHeader, CardContent } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import { 
   Settings, 
   User, 
-  Bell, 
-  Lock, 
-  CreditCard, 
   UserPlus, 
   Shield, 
-  HelpCircle, 
   Trash,
   LogOut,
-  ChevronRight,
   CheckCircle,
   Database,
   Briefcase
 } from 'lucide-react';
+
+// Define BadgeVariant type
+type BadgeVariant = 'default' | 'primary' | 'success' | 'warning' | 'error' | 'info';
 
 // Mock settings structure with permissions
 const settingsSections = [
@@ -494,7 +492,7 @@ function PasswordSettings() {
             <div>
               <p className="text-sm">Add an extra layer of security to your account</p>
               <p className="text-xs text-text-secondary mt-1">
-                You'll be asked for an authentication code in addition to your password when you sign in.
+                You&apos;ll be asked for an authentication code in addition to your password when you sign in.
               </p>
             </div>
             <div className="ml-4">
@@ -660,7 +658,7 @@ function UserManagementSettings() {
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <Badge
-                    variant={user.role === 'Admin' ? 'primary' : user.role === 'Attorney' ? 'success' : 'secondary'}
+                    variant={user.role === 'Admin' ? 'primary' : user.role === 'Attorney' ? 'success' : 'default'}
                   >
                     {user.role}
                   </Badge>
@@ -852,7 +850,7 @@ function DeleteAccountSettings() {
       <div className="space-y-6 max-w-md">
         <div>
           <label className="block text-sm font-medium text-text-secondary mb-1">
-            Type "DELETE" to confirm
+            Type &quot;DELETE&quot; to confirm
           </label>
           <input
             type="text"
@@ -873,7 +871,7 @@ function DeleteAccountSettings() {
         </div>
         
         <div className="pt-4">
-          <Button variant="danger" iconLeft={<Trash className="h-4 w-4" />}>
+          <Button variant="primary" iconLeft={<Trash className="h-4 w-4" />}>
             Permanently Delete Account
           </Button>
         </div>

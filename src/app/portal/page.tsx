@@ -221,7 +221,7 @@ export default function PortalPage() {
             <div className="md:flex md:justify-between md:items-center mb-6">
               <div>
                 <h2 className="text-2xl font-bold text-text-primary mb-1">Welcome, {clientName}</h2>
-                <p className="text-text-secondary">Here's an overview of your matters and recent activity</p>
+                <p className="text-text-secondary">Here&apos;s an overview of your matters and recent activity</p>
               </div>
               <Button variant="primary" className="mt-3 md:mt-0">
                 Request Consultation

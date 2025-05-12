@@ -7,15 +7,12 @@ import { Card, CardHeader, CardContent } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import { 
-  Calendar as CalendarIcon, 
   ChevronLeft, 
   ChevronRight, 
   Clock, 
   Users, 
   MapPin, 
-  Plus, 
-  List, 
-  Grid3X3
+  Plus
 } from 'lucide-react';
 
 // Mock calendar events
@@ -132,7 +129,7 @@ export default function CalendarPage() {
             <Card>
               <CardHeader 
                 title="Calendar" 
-                actions={
+                action={
                   <div className="flex gap-2">
                     <Button variant="ghost" className="p-1">
                       <ChevronLeft className="h-4 w-4" />
